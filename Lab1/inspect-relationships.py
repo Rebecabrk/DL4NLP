@@ -16,12 +16,12 @@ print(wn.synset('doctor.n.04').definition())
 # output: a person who holds Ph.D. degree (or the equivalent) from an academic institution
 
 print(wn.synsets('physician'))
-# outpus: [Synset('doctor.n.01')] => relationship = doctor & physician belong to the same synset => synonims
+# outpus: [Synset('doctor.n.01')] => relationship = doctor & physician belong to the same synset => synonyms
 
 
 common_synsets_kid_child = set(wn.synsets('kid', pos=wn.NOUN)).intersection(wn.synsets('child', pos=wn.NOUN))
 print(common_synsets_kid_child)
-# # output: {Synset('child.n.01'), Synset('child.n.02')} => relationship = synonymy
+# # output: {Synset('child.n.01'), Synset('child.n.02')} => relationship = synonym
 
 for syn in common_synsets_kid_child:
     print(syn.definition())
